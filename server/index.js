@@ -60,6 +60,6 @@ app.delete("/delete/:id",async(req,res)=>{
     res.status(200).json(deletedUser)
 })
 
-mongoose.connect("mongodb+srv://jawadahmedcode_db_user:QqTGWYHqrjv05pCR@cluster0.khc3wy8.mongodb.net").then(console.log("mongodb connected!"))
+mongoose.connect(process.env.MONGODB_URI).then(console.log("mongodb connected!"))
 
 app.listen(8000,()=>{console.log("Server Started!")})
