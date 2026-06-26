@@ -13,7 +13,7 @@ function CreateUser() {
     e.preventDefault();
     console.log("Creating user:", { name, email, age });
     
-    axios.post("http://localhost:8000/create",{name,email,age})
+    axios.post("https://basic-crud-backend-one.vercel.app/create",{name,email,age})
     .then(result=>console.log(result))
     .catch(err=>console.log(err))
 

@@ -15,7 +15,7 @@ function UpdateUser() {
 
 
   useEffect(()=>{
-      axios.get('http://localhost:8000/update/'+id)
+      axios.get('https://basic-crud-backend-one.vercel.app/update/'+id)
       .then(result=>{
     
         setName(result.data.name)
@@ -29,7 +29,7 @@ function UpdateUser() {
     e.preventDefault();
     console.log("Updating user record:", { name, email, age });
     
-    axios.put('http://localhost:8000/update/'+id,{name,email,age})
+    axios.put('https://basic-crud-backend-one.vercel.app/update/'+id,{name,email,age})
     .then(result=>{console.log(result.data)})
     .catch(err=>{console.log(err)})
     navigate('/'); 

@@ -9,14 +9,14 @@ function User() {
   const [users, setUsers] = useState([]);
 
   useEffect(()=>{
-    axios.get('http://localhost:8000/')
+    axios.get('https://basic-crud-backend-one.vercel.app/')
     .then(result=>{setUsers(result.data)})
     .catch(err=>{console.log(err)})
   },[])
 
   
   const handleDelete = (id) => {
-    axios.delete('http://localhost:8000/delete/'+id)
+    axios.delete('https://basic-crud-backend-one.vercel.app/delete/'+id)
     .then(result=>{
         console.log(result.data)
         window.location.reload();
