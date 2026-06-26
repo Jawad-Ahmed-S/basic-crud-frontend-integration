@@ -3,8 +3,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require('dotenv')
 const User = require('./models/userModel')
+
+
+dotenv.config()
+
 const app = express()
-// app.use(dotenv())
+
+
+
 app.use(cors())
 app.use(express.json())
 
